@@ -11,7 +11,6 @@ const STATUS_CODE = {
 }
 
 const getArnieQuotes = async (urls) => {
-  try {
     const responses = await Promise.allSettled(urls.map((url) => httpGet(url)));
 
     const results = responses.map((res) => {
@@ -28,10 +27,6 @@ const getArnieQuotes = async (urls) => {
     });
 
     return results;
-  } catch (err) {
-    // Catch any errors
-    console.error('Error in getArnieQuotes:', err);
-  }
 };
 
 module.exports = {
