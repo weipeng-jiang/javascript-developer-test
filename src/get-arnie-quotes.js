@@ -24,6 +24,7 @@ const getArnieQuotes = async (urls) => {
       }
 
       // In case httpGet rejects, handle it here
+      // and return failure message
     });
 
     return results;
